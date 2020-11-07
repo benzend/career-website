@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  font-size: large;
+  font-family: "Dosis", sans-serif;
+}
+
+:root {
+  --primary-color: orange;
+  --lighter-primary: #ffe9c0;
+  --hover-color: rgb(255, 182, 45);
+  --light-text: #111;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  z-index: 10;
+}
+
+nav.transparent {
+  background-color: rgba(255, 166, 0, 0);
+}
+
+nav:hover {
+  background-color: rgba(255, 166, 0, 0.568);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 0.8rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 1.5rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--hover-color);
+}
+
+nav #nav-logo {
+  margin-left: 5%;
+  width: 180px;
+  padding: 5px 5px 20px 5px;
+}
+
+nav .icons {
+  margin-right: 5%;
+}
+
+nav .icons a {
+  color: black;
+}
+
+nav .icons a i {
+  margin: 0 0.7rem;
+  padding: 20px;
+  font-size: 1.5rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+nav .icons a i:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+header {
+  background: url("https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?cs=srgb&dl=pexels-pixabay-417173.jpg&fm=jpg") no-repeat center center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+header h1 #title-word-swap {
+  position: relative;
+  top: 0;
+  left: 300px;
+  opacity: 0;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px black;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+header h1 #title-word-swap.appear {
+  left: 0;
+  opacity: 1;
+}
+
+header p {
+  font-size: 1.4rem;
+}
+
+#reviews {
+  height: 110vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(10deg, #ffd484, #ffecc8);
+}
+
+#reviews h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#reviews .references {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#reviews .references .reference {
+  position: relative;
+  left: 0;
+  text-align: center;
+  width: 25%;
+  height: 280px;
+  padding: 2%;
+  margin: 2%;
+  -webkit-box-shadow: 3px 3px 5px #0005;
+          box-shadow: 3px 3px 5px #0005;
+  background-color: #ffe9c0;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#reviews .references .reference:hover {
+  -webkit-box-shadow: 20px 20px 20px #0003;
+          box-shadow: 20px 20px 20px #0003;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#reviews .references .reference i {
+  color: var(--primary-color);
+}
+
+#reviews .references .reference h3 {
+  font-weight: 500;
+}
+
+#reviews .references .reference p {
+  color: var(--light-text);
+}
+
+#references1 {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+#references1.appear {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#references2 {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+#references2.appear {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#projects {
+  background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center/cover;
+  height: 200vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects .project {
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  z-index: 5;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-color: var(--lighter-primary);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#projects .project.rotate {
+  -webkit-transform: rotate3d(0, 1, 0, 360deg);
+          transform: rotate3d(0, 1, 0, 360deg);
+}
+
+#projects .project img {
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
+}
+/*# sourceMappingURL=style.css.map */

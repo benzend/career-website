@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  font-size: large;
+  font-family: "Dosis", sans-serif;
+}
+
+:root {
+  --primary-color: orange;
+  --lighter-primary: #ffe9c0;
+  --hover-color: rgb(255, 182, 45);
+  --light-text: #111;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  z-index: 10;
+  &.transparent {
+    background-color: rgba(255, 166, 0, 0);
+  }
+  &:hover {
+    background-color: rgba(255, 166, 0, 0.568);
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 0.8rem;
+      a {
+        color: black;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 1.5rem;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: var(--hover-color);
+        }
+      }
+    }
+  }
+  #nav-logo {
+    margin-left: 5%;
+    width: 180px;
+    padding: 5px 5px 20px 5px;
+  }
+  .icons {
+    margin-right: 5%;
+    a {
+      color: black;
+      i {
+        margin: 0 0.7rem;
+        padding: 20px;
+        font-size: 1.5rem;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: var(--hover-color);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+header {
+  background: url("https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?cs=srgb&dl=pexels-pixabay-417173.jpg&fm=jpg")
+    no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  h1 {
+    font-size: 5rem;
+    #title-word-swap {
+      position: relative;
+      top: 0;
+      left: 300px;
+      opacity: 0;
+      color: var(--primary-color);
+      text-shadow: 0 0 5px black;
+      transition: all 0.6s ease;
+      &.appear {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+#reviews {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(10deg, rgb(255, 212, 132), rgb(255, 236, 200));
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .references {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .reference {
+      position: relative;
+      left: 0;
+      text-align: center;
+      width: 25%;
+      height: 280px;
+      padding: 2%;
+      margin: 2%;
+      box-shadow: 3px 3px 5px #0005;
+      background-color: rgb(255, 233, 192);
+      border-radius: 5px;
+      transition: all 0.2s ease;
+      &:hover {
+        box-shadow: 20px 20px 20px #0003;
+        transform: scale(1.03);
+      }
+
+      i {
+        color: var(--primary-color);
+      }
+      h3 {
+        font-weight: 500;
+      }
+      p {
+        color: var(--light-text);
+      }
+    }
+  }
+}
+
+#references1 {
+  transform: translateX(200px);
+  opacity: 0;
+  transition: all 2s ease;
+  &.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#references2 {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all 2s ease;
+  &.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#projects {
+  background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    no-repeat center center/cover;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .project {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 5;
+    perspective: 300px;
+    transform-style: preserve-3d;
+    background-color: var(--lighter-primary);
+    transition: all 1s ease;
+    &.rotate {
+      transform: rotate3d(0, 1, 0, 360deg);
+    }
+    img {
+      width: 380px;
+      height: 280px;
+      border-radius: 20px;
+      transform: translateZ(1px);
+    }
+  }
+}
