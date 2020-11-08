@@ -46,6 +46,8 @@ nav {
         transition: background-color 0.3s ease;
         &:hover {
           background-color: var(--hover-color);
+          color: black;
+          text-decoration: none;
         }
       }
     }
@@ -100,6 +102,7 @@ header {
   }
   p {
     font-size: 1.4rem;
+    text-shadow: 0 0 5px whitesmoke;
   }
 }
 
@@ -115,6 +118,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(10deg, rgb(255, 212, 132), rgb(255, 236, 200));
+  overflow: hidden;
 
   .references {
     display: flex;
@@ -132,6 +136,7 @@ h2 {
       background-color: rgb(255, 233, 192);
       border-radius: 5px;
       transition: all 0.2s ease;
+
       &:hover {
         box-shadow: 20px 20px 20px #0003;
         transform: scale(1.03);
@@ -182,31 +187,5 @@ h2 {
     }
   }
   .project {
-    width: 400px;
-    height: 300px;
-    padding: 20px;
-    margin: auto;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    z-index: 5;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    background-color: var(--lighter-primary);
-    transition: all 1s ease;
-    &.rotate {
-      transform: rotate3d(0, 1, 0, 360deg);
-    }
-    .middle {
-      transform: translateZ(100px);
-    }
-    img {
-      width: 330px;
-      height: 230px;
-      border-radius: 20px;
-    }
   }
 }

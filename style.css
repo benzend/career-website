@@ -67,6 +67,8 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: var(--hover-color);
+  color: black;
+  text-decoration: none;
 }
 
 nav #nav-logo {
@@ -137,6 +139,7 @@ header h1 #title-word-swap.appear {
 
 header p {
   font-size: 1.4rem;
+  text-shadow: 0 0 5px whitesmoke;
 }
 
 h2 {
@@ -160,6 +163,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   background: linear-gradient(10deg, #ffd484, #ffecc8);
+  overflow: hidden;
 }
 
 #reviews .references {
@@ -250,50 +254,5 @@ h2 {
 
 #projects #proj1 .middle.appear {
   display: block;
-}
-
-#projects .project {
-  width: 400px;
-  height: 300px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 5;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  background-color: var(--lighter-primary);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-#projects .project.rotate {
-  -webkit-transform: rotate3d(0, 1, 0, 360deg);
-          transform: rotate3d(0, 1, 0, 360deg);
-}
-
-#projects .project .middle {
-  -webkit-transform: translateZ(100px);
-          transform: translateZ(100px);
-}
-
-#projects .project img {
-  width: 330px;
-  height: 230px;
-  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

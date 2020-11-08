@@ -23,12 +23,12 @@ function scrollHandler() {
   // Project 1
   if (pageYOffset > 1700 && pageYOffset < 1900) {
     proj1.classList.add("rotate");
-    proj1.firstElementChild.classList.remove("appear");
-    proj1.lastElementChild.classList.add("appear");
+    // proj1.firstElementChild.classList.add("rotate");
+    // proj1.lastElementChild.classList.add("rotate");
   } else {
     proj1.classList.remove("rotate");
-    proj1.firstElementChild.classList.add("appear");
-    proj1.lastElementChild.classList.remove("appear");
+    // proj1.firstElementChild.classList.remove("rotate");
+    // proj1.lastElementChild.classList.remove("rotate");
   }
   // Project 2
   //   if (pageYOffset > 1700 && pageYOffset < 1850) {
